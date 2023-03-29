@@ -12,10 +12,9 @@ a{
 .navbar{
     background-color: $dark-color;
     position: fixed;
-    //när man sätta position.fixed då sätta vi width
     width: 100%;
     .menu-main{
-        display:flex ;
+        display: flex;
         flex-wrap: wrap;
         padding: 0.5rem 1rem;
         .navbar-logo{
@@ -36,7 +35,6 @@ a{
                         transform: rotate(45deg) translate(5px,0px);
                     }
                     &:nth-child(2){
-                        //display. none kan ej animera
                         display: none;
                     }
                     &:last-child{
@@ -44,6 +42,7 @@ a{
                     }
                 }
             }
+
         }
         .menu-list{
             list-style: none;
@@ -52,18 +51,15 @@ a{
             &.active{
                 display: flex;
                 flex-wrap: wrap;
-                //centera länkar och att de inte sträcka ut
                 align-content: center;
                 height: 100vh;
             }
             .menu-item{
                 flex: 0 0 100%;
-                //centera länkar
                 text-align: center;
-                //add luft mellan rad länkar
                 padding: 1rem 0;
                 .menu-link{
-
+                    
                 }
             }
         }
@@ -72,5 +68,4 @@ a{
 section{
     height: 100vh;
     background-color: $praimary-color;
-
 }
