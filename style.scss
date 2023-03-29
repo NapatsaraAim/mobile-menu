@@ -3,11 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 20px;
+}
+body{
+    font-family: 'Sofia Sans';
 }
 a{
     text-decoration: none;
     color: $light-color;
+    &:hover{
+        color: $praimary-color;
+    }
 }
 .navbar{
     background-color: $dark-color;
@@ -16,11 +21,20 @@ a{
     .menu-main{
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
         padding: 0.5rem 1rem;
+        @media (min-width:768px){
+            max-width: 1200px;
+            margin: auto;
+        }
         .navbar-logo{
             margin-right: auto;
+            font-size: 2rem;
         }
         .menu-icon{
+            @media (min-width:768px){
+                display: none;
+            }
             .line{
                 background-color: $light-color;
                 width: 25px;
@@ -48,18 +62,27 @@ a{
             list-style: none;
             flex: 0 0 100%;
             display: none;
+            @media (min-width:768px){
+                display: flex;
+                justify-content: space-between;
+                flex: 0 0 60%;
+            }
             &.active{
                 display: flex;
                 flex-wrap: wrap;
                 align-content: center;
                 height: 100vh;
+                @media (min-width:768px) {
+                    height: initial;
+                }
             }
             .menu-item{
                 flex: 0 0 100%;
                 text-align: center;
                 padding: 1rem 0;
-                .menu-link{
-                    
+                @media (min-width:768px){
+                    padding: 0;
+                    flex: 0 0 auto;
                 }
             }
         }

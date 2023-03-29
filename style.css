@@ -1,14 +1,19 @@
 *, html {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 20px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sofia Sans";
 }
 
 a {
   text-decoration: none;
   color: rgb(255, 241, 225);
+}
+a:hover {
+  color: rgb(228, 74, 239);
 }
 
 .navbar {
@@ -17,15 +22,25 @@ a {
   width: 100%;
 }
 .navbar .menu-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
   padding: 0.5rem 1rem;
+}
+@media (min-width: 768px) {
+  .navbar .menu-main {
+    max-width: 1200px;
+    margin: auto;
+  }
 }
 .navbar .menu-main .navbar-logo {
   margin-right: auto;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .navbar .menu-main .menu-icon {
+    display: none;
+  }
 }
 .navbar .menu-main .menu-icon .line {
   background-color: rgb(255, 241, 225);
@@ -33,44 +48,52 @@ a {
   height: 2px;
   display: block;
   margin: 5px 0;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .navbar .menu-main .menu-icon.exit .line:first-child {
-  -webkit-transform: rotate(45deg) translate(5px, 0px);
-          transform: rotate(45deg) translate(5px, 0px);
+  transform: rotate(45deg) translate(5px, 0px);
 }
 .navbar .menu-main .menu-icon.exit .line:nth-child(2) {
   display: none;
 }
 .navbar .menu-main .menu-icon.exit .line:last-child {
-  -webkit-transform: rotate(-45deg) translate(5px, 0px);
-          transform: rotate(-45deg) translate(5px, 0px);
+  transform: rotate(-45deg) translate(5px, 0px);
 }
 .navbar .menu-main .menu-list {
   list-style: none;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   display: none;
 }
+@media (min-width: 768px) {
+  .navbar .menu-main .menu-list {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 60%;
+  }
+}
 .navbar .menu-main .menu-list.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-wrap: wrap;
+  align-content: center;
   height: 100vh;
 }
+@media (min-width: 768px) {
+  .navbar .menu-main .menu-list.active {
+    height: initial;
+  }
+}
 .navbar .menu-main .menu-list .menu-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   text-align: center;
   padding: 1rem 0;
 }
+@media (min-width: 768px) {
+  .navbar .menu-main .menu-list .menu-item {
+    padding: 0;
+    flex: 0 0 auto;
+  }
+}
+
 section {
   height: 100vh;
   background-color: rgb(228, 74, 239);
